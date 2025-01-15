@@ -58,12 +58,13 @@ app.get("/index", async (req, res) => {
   });
 });
 
-app.get("/read", async (req, res) => {
+app.get("/read/:id", async (req, res) => {
+
   const books = await prisma.Book.findMany({
     select: {
       url: true,
       title: true,
-      id: true
+      id: true,
     },
   });
   res.render("read", {

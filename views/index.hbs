@@ -1,18 +1,16 @@
-<h1>{{title}} GISELE{{user.name}}</h1>
-
-<p>Selecciona tu libro:</p>
-
+<div id="index-header">
+  <h1>{{title}} GISELE{{user.name}}</h1>
+  <p>Selecciona tu libro:</p>
+</div>
 <div>
-<ul>
+<ul id="book-container">
   {{#each books}}
-  <div>
-    <li>
+  <div id="book-items">
+    <li id="book-item">
       <h2>{{this.title}}</h2>
       <p>{{this.author}}</p>
-      <img src={{this.cover}} alt="preview"
-      width="200px"
-      height="250px">
-      <button>Leer</button>
+      <img src={{this.cover}} alt="preview">
+      <button {{navigateTo this.id}}>Leer</button>
     </li>
   </div>
   {{/each}}
