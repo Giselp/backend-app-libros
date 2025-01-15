@@ -1,0 +1,20 @@
+<h1>{{title}} GISELE{{user.name}}</h1>
+
+<p>Selecciona tu libro:</p>
+
+<div>
+<ul>
+  {{#each books}}
+  <div>
+    <li>
+      <h2>{{this.title}}</h2>
+      <p>{{this.author}}</p>
+      <img src={{this.cover}} alt="preview"
+      width="200px"
+      height="250px">
+      <button>Leer</button>
+    </li>
+  </div>
+  {{/each}}
+</ul>
+</div>
