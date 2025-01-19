@@ -39,3 +39,8 @@ model Book {
   cover String
   Users User []
 }
+model Session {
+  sid     String   @id @db.VarChar(255) // Session ID
+  sess    Json     // Session data stored as JSON
+  expire  DateTime // Expiration date of the session
+}

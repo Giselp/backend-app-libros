@@ -1,4 +1,4 @@
-const helpers = {
+/* const helpers = {
 
   navigateTo : (id) => {
     return `onclick="window.location.href='/read/${id}'"`;
@@ -6,4 +6,4 @@ const helpers = {
 
 }
 
-module.exports = helpers
+module.exports = helpers */

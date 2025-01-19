@@ -1,17 +1,20 @@
 <h1>Registrate</h1>
-<form action="/auth/register" method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input type="name" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Registrar</button>
-</form>
+
+<div id="index-header">
+    <form action="/auth/register-page" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="nombre" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+</div>
 <p>Ya tienes una cuenta? <a href="/auth/login">Inicia sesión aquí</a></p>

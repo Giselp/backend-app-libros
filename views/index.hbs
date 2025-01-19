@@ -1,16 +1,18 @@
 <div id="index-header">
-  <h1>{{title}} GISELE{{user.name}}</h1>
-  <p>Selecciona tu libro:</p>
+  <h1 id="index-p">{{title}} GISELE{{user.name}}</h1>
+  <p id="index-p">Selecciona tu libro:</p>
 </div>
 <div>
 <ul id="book-container">
   {{#each books}}
   <div id="book-items">
     <li id="book-item">
-      <h2>{{this.title}}</h2>
-      <p>{{this.author}}</p>
+      <h2>"{{this.title}}"</h2>
+      <p>By {{this.author}}</p>
       <img src={{this.cover}} alt="preview">
-      <button {{navigateTo this.id}}>Leer</button>
+      <a href="/books/read/{{this.id}}">
+        <button id="btn-read">Leer</button>
+      </a>
     </li>
   </div>
   {{/each}}

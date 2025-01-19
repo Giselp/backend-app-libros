@@ -11,8 +11,10 @@
 #index-header{
   margin: 30px 10px 40px 10px;
 }
-h1,p{
-  margin: 15px;
+#index-p{
+  text-align: left;
+  margin-top: 25px;
+  color: black
 }
 #book-container{
   padding: 20px 20px;
@@ -21,7 +23,7 @@ h1,p{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(137, 43, 226, 0.371);
+  background-color: rgba(137, 43, 226, 0.238);
 }
 #book-items{
   display: flex;
@@ -40,10 +42,13 @@ h1,p{
   height: 400px;
 }
 h2{
-  font-size: 20px;
+  font-size: 22px;
+  text-align: center;
 }
 p{
-  font-size: 14px;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(132, 128, 128);
 }
 ul{
   list-style-type: none;
@@ -60,4 +65,52 @@ img{
   margin-top: 15px;
   width: 200px;
   height: 250px;
+}
+
+/*HOME*/
+#index-header{
+  margin: 30px 30px;
+  line-height: 2;
+}
+#index-p{
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  color: black
+}
+#btn-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#btn-entrar{
+  padding: 12px 25px;
+  font-size: 18px;
+}
+
+/*LOGIN*/
+#index-header{
+  margin: 30px 30px;
+  line-height: 2;
+}
+#login-title{
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*BOTON ATRAS*/
+#a-volver{
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit;
+  margin: 15px;
+}
+#p-volver{
+  font-size: 20px;
+  color:rgb(135, 103, 165);
 }
