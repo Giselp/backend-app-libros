@@ -10,11 +10,10 @@ router.get("/login", (req, res) => {
   });
 });
 
-//Post login
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/books/index",
+    successRedirect: "/books",
     failureRedirect: "/auth/register-page",
     failureFlash: true,
   })
@@ -24,7 +23,6 @@ router.get("/register-page", (req, res) => {
   res.render("register");
 });
 
-//Post register
 router.post("/register-page", async (req, res) => {
   try {
     const { nombre, email, password } = req.body;
@@ -44,8 +42,6 @@ router.post("/register-page", async (req, res) => {
     res.send("Error al registrar usuario.");
   }
 });
-
-
 
 
 module.exports = router;

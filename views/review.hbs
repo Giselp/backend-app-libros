@@ -1,0 +1,20 @@
+<nav id="nav-ul">
+  <a href="">HOME</a>
+  <a href="">ABOUT US</a>
+  <a href="">CONTACT</a>
+</nav>
+<div id="container-review">
+  <h2>"{{books.title}}"</h2>
+  <p>By {{books.author}}</p>
+  <img src={{books.cover}} alt="preview" /><br />
+  <h3>Sinopsis</h3>
+  <p>fdslkfjdlkfjkldffj</p>
+  <h3>Reseñas</h3>
+  <form action="/books/review" method="post">
+    <div>
+      <label for="messsage"></label>
+      <textarea id="message" name="message" rows="10" cols="30" placeholder="Deja tu mensaje aqui..."></textarea>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>

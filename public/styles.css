@@ -1,22 +1,39 @@
-*{
- 
+* {
   margin: 0;
   padding: 0;
-  background-color: rgb(251, 251, 247);
   color: "black";
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-/*INDEX*/
-#index-header{
-  margin: 30px 10px 40px 10px;
+nav{
+  background-color: rgb(224, 174, 234);
 }
-#index-p{
-  text-align: left;
-  margin-top: 25px;
-  color: black
+#nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 20px 30px 20px 30px;
+  color: white;
 }
-#book-container{
+a{
+  font-size: 14px;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+#main-body{
+  text-align: center;
+  padding-top: 20px;
+  background-color: rgb(251, 251, 247);
+}
+
+#index-header {
+  text-align: center;
+  margin: 30px 10px 20px 10px;
+}
+
+#book-container {
   padding: 20px 20px;
   display: flex;
   flex-direction: row;
@@ -25,14 +42,15 @@
   justify-content: center;
   background-color: rgba(137, 43, 226, 0.238);
 }
-#book-items{
+#book-items {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 35px 40px;
+  margin: 25px 30px;
+  background-color: rgb(251, 251, 247);
 }
-#book-item{
+#book-item {
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
@@ -41,19 +59,19 @@
   width: 280px;
   height: 400px;
 }
-h2{
+h2 {
   font-size: 22px;
   text-align: center;
 }
-p{
+p {
   font-size: 16px;
   text-align: center;
   color: rgb(132, 128, 128);
 }
-ul{
+ul {
   list-style-type: none;
 }
-button{
+button {
   margin-top: 15px;
   padding: 6px 16px;
   border: none;
@@ -61,56 +79,63 @@ button{
   color: white;
   background-color: rgba(87, 68, 198, 0.9);
 }
-img{
+img {
   margin-top: 15px;
   width: 200px;
   height: 250px;
 }
 
-/*HOME*/
-#index-header{
+#index-header {
   margin: 30px 30px;
   line-height: 2;
 }
-#index-p{
-  text-align: left;
+#index-p {
   margin-top: 35px;
   margin-bottom: 25px;
-  color: black
+  color: black;
 }
-#btn-container{
+#btn-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#btn-entrar{
+#btn-entrar {
   padding: 12px 25px;
   font-size: 18px;
 }
 
-/*LOGIN*/
-#index-header{
+#index-header {
   margin: 30px 30px;
   line-height: 2;
 }
-#login-title{
+#title {
+  margin-top: 35px;
+  margin-bottom: 5px;
   text-align: center;
 }
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/*BOTON ATRAS*/
-#a-volver{
-  text-decoration: none; /* Quita el subrayado */
+#a-volver {
+  text-decoration: none;
   color: inherit;
   margin: 15px;
 }
-#p-volver{
+#p-volver {
   font-size: 20px;
-  color:rgb(135, 103, 165);
+  color: rgb(135, 103, 165);
+}
+#container-review{
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.5;
+
 }
