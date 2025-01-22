@@ -1,20 +1,31 @@
 <nav id="nav-ul">
-  <a href="">HOME</a>
-  <a href="">ABOUT US</a>
-  <a href="">CONTACT</a>
+  <a href="/home">HOME</a>
+  <a href="/aboutus">ABOUT US</a>
+  <a href="/contact">CONTACT</a>
 </nav>
-<div id="container-review">
+
+<div id="container-book">
   <h2>"{{books.title}}"</h2>
   <p>By {{books.author}}</p>
   <img src={{books.cover}} alt="preview" /><br />
+</div>
+<div id="sinop-container">
   <h3>Sinopsis</h3>
-  <p>fdslkfjdlkfjkldffj</p>
+  <p id="sinop-text">{{books.sinopsis}}</p>
+</div>
+<div id="container-review">
   <h3>Reseñas</h3>
   <form action="/books/review" method="post">
     <div>
-      <label for="messsage"></label>
-      <textarea id="message" name="message" rows="10" cols="30" placeholder="Deja tu mensaje aqui..."></textarea>
+      <label for="message"></label>
+      <textarea
+        id="message"
+        name="message"
+        rows="10"
+        cols="25"
+        placeholder="Deja tu mensaje aqui..."
+      ></textarea>
     </div>
-    <button type="submit">Login</button>
+    <button type="submit">ENVIAR</button>
   </form>
 </div>

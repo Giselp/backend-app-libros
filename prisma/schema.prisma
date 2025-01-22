@@ -29,6 +29,7 @@ model User {
   updatedAt DateTime @updatedAt
   role Role @default(USER)
   Books Book []
+  Comments Comments []
 }
 
 model Book {
@@ -37,10 +38,19 @@ model Book {
   author String
   url String
   cover String
+  sinopsis String @default("Sin sinopsis")
   Users User []
+  Comments Comments []
 }
 model Session {
   sid     String   @id @db.VarChar(255) // Session ID
   sess    Json     // Session data stored as JSON
   expire  DateTime // Expiration date of the session
+}
+
+model Comments {
+  id String @id @default(uuid())
+  review String 
+  Books Book []
+  Users User []
 }

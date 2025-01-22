@@ -5,7 +5,7 @@ const isAuthenticated = require("../middlewares/isAuthenticated")
 
 router.get("/", isAuthenticated, async (req, res) => {
   const books = await prisma.Book.findMany();
-  console.log(books)
+  console.log(books);
   res.render("index", { books });
 });
 
@@ -28,6 +28,7 @@ router.get("/review/:id", isAuthenticated, async (req, res) => {
       id: bookId,
     },
   });
+  console.log(books.sinopsis)
   res.render("review", {
     books,
   });
