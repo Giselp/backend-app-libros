@@ -3,7 +3,11 @@
   <a href="/aboutus">ABOUT US</a>
   <a href="/contact">CONTACT</a>
 </nav>
-
+<div>
+  <a id="a-volver" href="/books">
+    <p id="p-volver">Volver</p>
+  </a>
+</div>
 <div id="container-book">
   <h2>"{{books.title}}"</h2>
   <p>By {{books.author}}</p>
@@ -15,7 +19,7 @@
 </div>
 <div id="container-review">
   <h3>Reseñas</h3>
-  <form action="/books/review" method="post">
+  <form action="/books/more" method="post">
     <div>
       <label for="message"></label>
       <textarea

@@ -28,8 +28,6 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   role Role @default(USER)
-  Books Book []
-  Comments Comments []
 }
 
 model Book {
@@ -39,8 +37,7 @@ model Book {
   url String
   cover String
   sinopsis String @default("Sin sinopsis")
-  Users User []
-  Comments Comments []
+  comment Comments []
 }
 model Session {
   sid     String   @id @db.VarChar(255) // Session ID
@@ -51,6 +48,8 @@ model Session {
 model Comments {
   id String @id @default(uuid())
   review String 
-  Books Book []
-  Users User []
+  book Book @relation(fields: [bookId], references: [id])
+  bookId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
