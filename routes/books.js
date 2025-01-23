@@ -21,8 +21,7 @@ router.get("/read/:id", isAuthenticated, async (req, res) => {
   });
 });
 
-router.post("/more/:id", async (req, res) => {
-  console.log("hola post");
+router.post("/review/:id", async (req, res) => {
   try {
     const bookId = req.params.id;
     console.log(bookId);
