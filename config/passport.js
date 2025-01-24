@@ -11,10 +11,11 @@ passport.use(
     },
     async (email, password, done) => {
     try {
+      console.log("Correo proporcionado:", email);
       const user = await prisma.User.findUnique({
         where: { email },
       });
-      console.log(user, "desde passport")
+      console.log("Usuario encontrado:", user);
       if (!user) {
         return done(null, false, { message: "Usuario no encontrado" });
       }
