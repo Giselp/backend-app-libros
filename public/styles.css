@@ -178,13 +178,14 @@ textarea{
 
 #col-container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   gap: 10px;
 }
 #col-lat{
-  width: 15%;
   background-color: red;
 }
 #col-mid{
-  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
