@@ -3,33 +3,39 @@
   <a href="/aboutus">ABOUT US</a>
   <a href="/contact">CONTACT</a>
 </nav>
-<div>
-  <a id="a-volver" href="/books">
-    <p id="p-volver">Volver</p>
-  </a>
-</div>
-<div id="container-book">
-  <h2>"{{books.title}}"</h2>
-  <p>By {{books.author}}</p>
-  <img src={{books.cover}} alt="preview" /><br />
-</div>
-<div id="sinop-container">
-  <h3>Sinopsis</h3>
-  <p id="sinop-text">{{books.sinopsis}}</p>
-</div>
-<div id="container-review">
-  <h3>Reseñas</h3>
-  <form action="/books/review/{{books.id}}" method="post">
+<div id="col-container">
+  <div id="col-lat"></div>
+  <div id="col-mid">
     <div>
-      <label for="message"></label>
-      <textarea
-        id="message"
-        name="message"
-        rows="10"
-        cols="25"
-        placeholder="Deja tu mensaje aqui..."
-      ></textarea>
+      <a id="a-volver" href="/books">
+        <p id="p-volver">Volver</p>
+      </a>
     </div>
-    <button type="submit">ENVIAR</button>
-  </form>
+    <div id="container-book">
+      <h2>"{{books.title}}"</h2><br /><br />
+      <p>By {{books.author}}</p>
+      <img src={{books.cover}} alt="preview" /><br />
+    </div>
+    <div id="sinop-container">
+      <h3>Sinopsis</h3><br /><br />
+      <p id="sinop-text">{{books.sinopsis}}</p>
+    </div>
+    <div id="container-review">
+      <h3>Reseñas</h3><br />
+      <form action="/books/review/{{books.id}}" method="post">
+        <div>
+          <label for="message"></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            cols="25"
+            placeholder="Deja tu mensaje aqui..."
+          ></textarea>
+        </div>
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+  <div id="col-lat"></div>
 </div>

@@ -167,10 +167,24 @@ textarea{
   text-align: center;
   line-height: 1.5;
   margin-top: 20px;
+  font-size: 14px;
 
 }
 #sinop-text{
-  font-size: 12px;
+  font-size: 16px;
   padding-right: 40px;
   padding-left: 40px;
+}
+
+#col-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+#col-lat{
+  width: 15%;
+  background-color: red;
+}
+#col-mid{
+  width: 70%;
 }
