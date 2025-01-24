@@ -5,28 +5,30 @@ const prisma = require("../prisma");
 const bcrypt = require("bcrypt");
 
 passport.use(
-  new LocalStrategy( {
-      usernameField: 'email', 
-      passwordField: 'password', 
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
     },
     async (email, password, done) => {
-    try {
-      console.log("Correo proporcionado:", email);
-      const user = await prisma.User.findUnique({
-        where: { email },
-      });
-      console.log("Usuario encontrado:", user);
-      if (!user) {
-        return done(null, false, { message: "Usuario no encontrado" });
+      try {
+        console.log("Correo proporcionado:", email);
+        const user = await prisma.User.findUnique({
+          where: { email },
+        });
+        console.log("Usuario encontrado:", user.email);
+        if (!user.email) {
+          return done(null, false, { message: "Usuario no encontrado" });
+        }
+        if (!bcrypt.compareSync(password, user.password)) {
+          return done(null, false, { message: "Contraseña incorrecta" });
+        }
+        return done(null, user);
+      } catch (error) {
+        return done(error);
       }
-      if (!bcrypt.compareSync(password, user.password)) {
-        return done(null, false, { message: "Contraseña incorrecta" });
-      }
-      return done(null, user);
-    } catch (error) {
-      return done(error);
     }
-  })
+  )
 );
 
 passport.serializeUser((user, done) => {
