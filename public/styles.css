@@ -167,13 +167,12 @@ textarea{
   text-align: center;
   line-height: 1.5;
   margin-top: 20px;
-  font-size: 14px;
-
 }
+
 #sinop-text{
-  font-size: 16px;
   padding-right: 40px;
   padding-left: 40px;
+  font-size: 16px;
 }
 
 #col-container{
@@ -182,10 +181,9 @@ textarea{
   gap: 10px;
 }
 #col-lat{
-  background-color: red;
+  background-color: rgb(82, 63, 78);
 }
 #col-mid{
   display: flex;
-  flex-direction: column;
   align-items: center;
 }

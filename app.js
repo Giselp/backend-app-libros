@@ -70,6 +70,13 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
+/* app.get("/error", (req, res) => {
+  const mensaje = "Mensaje creado exitosamente";
+  const registro = "Usuario registrado correctamente";
+  const errorMes = "Algunos de los datos ingresados no es correcto. Vuelva a intentarlo";
+  res.render("error", { mensaje, registro, errorMes})
+}) */
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
